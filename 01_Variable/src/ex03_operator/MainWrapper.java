@@ -86,6 +86,7 @@ public class MainWrapper {
   
   // ex04 메소드 정의
   public static void ex04() {   
+    // 관계 연산 크기 비교
     int a = 3;
     int b = 5;
     
@@ -118,15 +119,67 @@ public class MainWrapper {
     System.out.println(orReasult);
     System.out.println(notReasult);
    
+    //2023/07/13
+    //Short, Circuit Evaluation
+    //1. 논리 AND : 결과가 false인 조건이 나타나면 더 이상 조건을 체크하지 않는다. 최종 결과가 false로 정해졌기 때문이다.
+    //2. 논리 OR  : 결과가 true인 조건이 나타나면 더 이상 조건을 체크하지 않는다. 최종결과가 true로 정해졌기 때문이다.
+    int i = 10; 
+    int j = 10;
+    
+    boolean andSceResult = (++i == 10) && (++j == 10); // j 실행 안함  false
+    System.out.println(andSceResult);
+    System.out.println(i);
+    System.out.println(j);
+    
+    boolean orSceResult = (j ++ == 10 ) || (i ++ == 10);
+    System.out.println(orSceResult);
+    System.out.println(i);
+    System.out.println(j);
+  }
+  
+  
+   //ex05 메소드 정싀
+  public static void ex05() {
+    
+    // 조건 연산자(3개의 항을 사용하므로 삼항 연산이라고도 한다.)
+    //조건식 ? (true인 경우 결과 : false인 경우 결과 )
+    int score = 100;
+    String result = (score >= 60) ? "합격" : "불합격";
+    System.out.println(result);
     
   }
   
+  //ex06 메소드 정싀
+ public static void ex06() {
+   // 문자열 연결
+   String str1 ="구디" + "아카데미";
+   String str2 = 4 + "달라";
+   String str3 = 1 + 2 +  "번지";
+   System.out.println(str1);
+   System.out.println(str2);
+   System.out.println(str3);
+   
+   // 정수 -> 문자열
+   // 실수 -> 문자열
+   String str4 = 100 +""; // 빈 문자열("")을 더해주면 된다.
+   String str5 = 1.5 +""; // 빈 문자열("")을 더해주면 된다.
+   System.out.println(str4);
+   System.out.println(str5);
+   
+   // 참고. 문자열로 변환하는 메소도가 있다.
+   String str6 = String.valueOf(100); //잘 안 쓸 뿐 있다.
+ } 
+   
+  
   public static void main(String[] args) {  
     //ex01 메소드 실행 부탁(메소드 호출)
-    ex01();                                     //  실행 1
-    hello1();
-    hello2();
-  }
+    //ex01();                                     //  실행 1
+    //hello1();
+    //hello2();
+    //ex04();
+    //ex05();
+    ex06();
+  } 
   
   public static void hello2() {
     System.out.println("안녕 자바2");
@@ -136,7 +189,8 @@ public class MainWrapper {
     //ex03 메소드 호출
     //ex03();
     //ex04메소드 호출
-    ex04();
+    //ex04();
+ 
   }
 
 }
