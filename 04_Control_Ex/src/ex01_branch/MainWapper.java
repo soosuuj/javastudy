@@ -60,19 +60,18 @@ public class MainWapper {
     
     if(scYear <= 3) {
       if(score >= 60) {
-        pass ="합격";
-          }else {
-           pass ="불합격";
-          }
-      } else  {
-         if(scYear >= 70) {
-           pass ="합격";
-         } else {
-           pass ="불합격";
-         }
+        pass = "합격";
+      } else {
+        pass = "불합격";
+      }
+    } else {
+      if(score >= 70) {
+        pass = "합격";
+      } else {
+        pass = "불합격";
+      }
     }
     System.out.println(pass);
-
   }
   
   public static void ex03_1()  {
@@ -128,7 +127,7 @@ System.out.println(order + " 은(는)" + price + "입니다.");
 
   public static void ex05() {
     
-  //월에 따른 계절         월 % 12
+  //월에 따른 계절         월 % 12   - 배열로도 풀 수 있음, 인덱스 찾아 계산 가능
     //3 ~ 5 : 봄            3 ~ 5
     //6 ~ 8 : 여름          6 ~ 8
     //9 ~ 11: 가을          9 ~ 11
@@ -252,7 +251,7 @@ System.out.println(month + " 은(는)" + season + "입니다.");
  
  public static void ex08() {
     // 대소문자 변환 (구글링으로 아스키코드 검색 후 참고)
-    char ch = 'A';  // 임의의 대문자 또는 소문자
+    char ch = 'y';  // 임의의 대문자 또는 소문자
 
     if(ch >= 65 && ch <= 90) {  //대문자라는 뜻
       ch += 32;
