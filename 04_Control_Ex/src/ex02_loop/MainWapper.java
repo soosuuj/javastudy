@@ -149,7 +149,7 @@ public class MainWapper {
     for(int row = 1; row <= 5; row++) {
       for(int space = 1; space <= 5-row ; space++) {
         System.out.print(" ");  
-      }                                                        //row=1, star=5/row=2, star=6
+      }                                                        //row=1, star=4/row=2, star=3
       for(int star = 6 - row ; star <= 9-(5-row) ; star++ ) {  //row=1, star=5/ row=2, star=4 /////space =4, star = 5 => 9
         System.out.print("*");
       }
