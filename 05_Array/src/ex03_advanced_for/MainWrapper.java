@@ -54,7 +54,7 @@ public class MainWrapper {
           System.out.print(String.format("%4d", number));
       }
       System.out.println();
-    }
+    }   
   }
 
   public static void main(String[] args) {

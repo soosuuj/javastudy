@@ -223,7 +223,7 @@ System.out.println(month + " 은(는)" + season + "입니다.");
     //4 ~ 6 : 2분기        (month - 1)  /3 + 1 (3, 4, 5) 는 3으로 나눴을 때 몫이 1 
     //7 ~ 9 : 3분기        (month - 1)  /3 + 1 (0, 1, 2) 는 3으로 나눴을 때 몫이 2 
     //10 ~ 12 : 4분기
-    int m = 7;
+    int m = 12;
     System.out.println ((m - 1) / 3 + 1 + "분기");
   }
   
@@ -262,6 +262,7 @@ System.out.println(month + " 은(는)" + season + "입니다.");
  }
  
  
+ 
  public static void ex08_1() {
     // 대소문자 변환 (구글링으로 아스키코드 검색 후 참고)
     char ch = 'A';  // 임의의 대문자 또는 소문자
@@ -276,18 +277,18 @@ System.out.println(month + " 은(는)" + season + "입니다.");
  
 
   public static void main(String[] args) {
-    ex01();
-    ex02();
-    ex03();
-    ex03_1();
-    ex04();
-    ex05();
-    ex05_1();
-    ex06();
+    //ex01();
+    //ex02();
+    //ex03();
+    //ex03_1();
+    //ex04();
+    //ex05();
+    //ex05_1();
+    //ex06();
     ex06_1();
-    ex07();
-    ex08();
-    ex08_1();
+    //ex07();
+    //ex08();
+    //ex08_1();
   }
 
 }

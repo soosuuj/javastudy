@@ -106,7 +106,7 @@ public class MainWapper {
     day += nday; // 14일로부터 10일 후 
     String[] weeknames = {"금", "토", "일", "월", "화", "수", "목"};
     System.out.println(day + "일은 " + weeknames[day  % 7] + "요일입니다.");
-   
+
   }
   
   /* 
