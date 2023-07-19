@@ -9,7 +9,7 @@ package ex04_field;
  * @version 1.0.0
  *
  */
-public class AccCalculator { // 객체 생성 main애서ㅗ 
+public class AccCalculator { // 객체 생성 main애서
 
   /*
    * 필드(field) // 객체마다 다른 값을 가질 수 있게 하는 것 - 각 이름이 다른 것을 필드에 저장한다~ 너낌
@@ -35,6 +35,7 @@ public class AccCalculator { // 객체 생성 main애서ㅗ
    */
   public void addition(double a) { 
     value += a; // value = value + a; -> 복합연산, 
+    System.out.println("+" + a + " = " + value);
   }
   
   /**
@@ -45,7 +46,8 @@ public class AccCalculator { // 객체 생성 main애서ㅗ
    */
   public void substraction(double a) { 
     value -= a; // value = value + a; -> 복합연산, 
-  }
+    System.out.println("-" + a + " = " + value);
+    }
   
   /**
    * 
@@ -55,6 +57,7 @@ public class AccCalculator { // 객체 생성 main애서ㅗ
    */
   public void multiplication(double a) { 
     value *= a; // value = value + a; -> 복합연산, 
+    System.out.println("*" + a + " = " + value);
   }
   /**
    * 
@@ -64,8 +67,13 @@ public class AccCalculator { // 객체 생성 main애서ㅗ
    */
   public void division(double a) { 
     value /= a; // value = value + a; -> 복합연산, 
+    System.out.println("/" + a + " = " + value);
+
   }
   
+  /**
+   * 필드 value를 출력하는 메소드
+   */
   
   public void showValue() { // 결과 출력
     System.out.println(value);
