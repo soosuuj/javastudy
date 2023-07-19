@@ -14,6 +14,12 @@ public class MainWrapper2 {
     print(10);     // 정수를 출력하고 싶은 print 메소드
     print(1.5);    // 실수를 출력하고 싶은 print 메소드
     print(10, 20); // 정수를 2개 출력하고 싶은 print 메소드
+    print(1.5, 1.2); // 실수 2개를 출력하고 싶은 print 메소드
+  }
+  
+  public static void print(double a, double b) {  // 아래 double a - System.out.println(a); 덕분에 출력이 가능
+    print(a);  // 실수를 1개 출력하고 싶은 print 메소드
+    print(b);  
   }
   
   public static void print(int a, int b) {
