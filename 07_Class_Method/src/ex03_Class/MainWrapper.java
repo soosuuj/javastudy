@@ -9,7 +9,10 @@ public class MainWrapper {
     Calculator myCalc; 
     
     // Calculator 객체 생성  -> myCalc이 손으로 만질 수 있는 계산기
-    myCalc = new Calculator(); // Calculator 만들지 않았는데 호출됨.. 
+    // 객체 == 인스턴스 (메모리에 로드된 인스턴스)
+    myCalc = new Calculator(); // 인스턴스화 : 메모리에 로드되었다. 
+    
+    // Calculator 만들지 않았는데 호출됨.. 
     //객체를 만들어주는 메소드는 개발자가 만들지 않으면 자바가 만들어줌
     
     // 계산하고자 하는 실수 2개 준비
