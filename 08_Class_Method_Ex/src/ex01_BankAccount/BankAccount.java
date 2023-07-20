@@ -36,9 +36,9 @@ public class BankAccount {
    */
   public void deposit(long money) {
     if(money <= 0) {
-      return; // 메소드 종료
+      return;  // 메소드 종료
     }
-    balance += money; // 복합연산
+    balance += money;
   }
   /**
    * 출금 메소드<br>
@@ -58,24 +58,36 @@ public class BankAccount {
   }
   */
   
-  public long withrawal(long money) {
+  public long withdrawal(long money) {
     long retVal = 0;
-    if(money <= 0 || money > balance ) {
+    if(money <= 0 || money > balance) {
       retVal = 0;
-    }else {
-    balance -= money;
-  }
+    } else {
+      balance -= money;
+      retVal = money;
+    }
     return retVal;
- }
-
-
- //Setter
-  public void setBalance(long param) {
-    balance = param;
+  }
+/**
+ * 
+ * 이체 메소드<br>
+ * 다른 계좌로 이체하는 메소드로 기존의 입금 메소드와 출금 메소드를 활용한다.<br>
+ * 내 계좌에서 출금을 먼저 수행하고, 출금된 금액만큼 다른 계좌로 입금한다.
+ * @param acc 다른 계좌
+ * @param money 이체할 금액
+ */
+  public void transfer(BankAccount acc, long money) {
+    acc.deposit(withdrawal(money));
   }
   
-  public void setAccNo(String param) {
-    accNo = param;
+
+ //Setter
+  public void setBalance(long balance) {
+    this.balance = balance;
+  }
+  
+  public void setAccNo(String accNo) {
+    this.accNo = accNo;
   }
   
   //getter
@@ -87,5 +99,8 @@ public class BankAccount {
   public String getAccNo() {
     return accNo;
   }
+  
 }  
+
+
   

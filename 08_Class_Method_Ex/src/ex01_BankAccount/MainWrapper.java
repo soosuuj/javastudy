@@ -14,7 +14,7 @@ public class MainWrapper {
     
     // my 객체에 출금하기
     // my.withrawal(60000); //여전히 50000원 출력
-    my.withrawal(1);
+    my.withdrawal(1);
       
       
     //  my 객체 조회하기
@@ -30,8 +30,10 @@ public class MainWrapper {
     my.transfer(you, 30000);
     
     // my 객체 조회하기
-    my.inquiry(); //통장잔액 : 19999원
-    you.inquiry(); // 통장잔액 : 30000원
+    my.inquiry();  // 통장잔액: 19999원
+    you.inquiry(); // 통장잔액: 30000원
+    
+    
     
   }
 

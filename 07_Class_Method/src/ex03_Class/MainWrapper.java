@@ -9,7 +9,8 @@ public class MainWrapper {
     Calculator myCalc; 
     
     // Calculator 객체 생성  -> myCalc이 손으로 만질 수 있는 계산기
-    myCalc = new Calculator();
+    myCalc = new Calculator(); // Calculator 만들지 않았는데 호출됨.. 
+    //객체를 만들어주는 메소드는 개발자가 만들지 않으면 자바가 만들어줌
     
     // 계산하고자 하는 실수 2개 준비
     double a = 1.5;
@@ -24,3 +25,4 @@ public class MainWrapper {
   }
 
 }
+ 
