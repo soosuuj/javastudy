@@ -3,10 +3,9 @@ package ex08_Bakery;
 public class Customer {
 
   private int count;  // 빵을 몇 개 샀는가?
-  private int money;     // 돈을 얼마나 가지고 있는가?
+  private int money;  // 돈을 얼마나 가지고 있는가?
   
-  
-  
+ 
   public Customer(int money) {
     this.money = money;
   }
@@ -49,13 +48,6 @@ public class Customer {
     this.money -= money;           // 10000원 내고,
     this.money += bc.getChange();  // 4000원 받기
     }
-    
-    
-    
   }
-
-  
-    
- 
 }
 
