@@ -48,13 +48,7 @@ public class User { //field, method 두가지만 class에 들어갈 수 있음
   //getter : 필드값을 외부로 반환(return)하는 메소드, 
   public String getId() { //String 반환타입  getId를 호출하면 id 알려줌
     return id;
-    }
-  /*
-  public void setAge(int a) {
-    age = a;
   }
-  */
-  
    public int getAge() {
      return age;
   }

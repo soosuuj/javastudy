@@ -80,10 +80,4 @@ public class AccCalculator { // 객체 생성 main애서
   }
   
   
-  
-  
-  
-  
-  
-  
 }

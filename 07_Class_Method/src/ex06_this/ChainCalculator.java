@@ -8,7 +8,7 @@ package ex06_this;
 
 
 /**
- * <p>메소드를 연속해서 호출할 수 있는 메소드 체이니(method chaining)이 가능한 계산기</p>
+ * <p>메소드를 연속해서 호출할 수 있는 메소드 체이닝(method chaining)이 가능한 계산기</p>
  * <p>사칙연산 메소드를 연속해서 호출할 수 있다.</p>
  * @author 홍길동
  * @since 2023.07.20

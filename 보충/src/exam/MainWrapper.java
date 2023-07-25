@@ -138,13 +138,14 @@ public class MainWrapper {
   // 100원 짜리 : 3개
   // 10원 짜리 : 3개
   // 1원 짜리 : 2개
+  
   public static void q6() {
     /*
      * 75832 / 50000 -> 1이 남음(몫) -> count[0], 오만원 짜리 하나 필요,
-     * 25832 / 10000 -> 2(몫) -> count[1]
-     * 5832  / 5000  -> 1(몫) -> count[2]
+     * 25832 / 10000 -> 2(몫)        -> count[1]
+     * 5832  / 5000  -> 1(몫)        -> count[2]
      * ...
-     * 2     / 1     ->          count[9]
+     * 2     / 1     ->                 count[9]
      * ----------------------------------
      * money / unit[i]   / count[i]  i => 같은 번호
      * money %= unit[i]  //   money = money % unit[i] 
@@ -323,20 +324,19 @@ public class MainWrapper {
 		String strScore = "75"; // 숫자로 변환 필요
 		String gift = ""; //  String gift = null;
 		
-	  int score = Integer.parseInt(strScore);
-	  if(score >= 60) {
-	    gift = gift + "행주"; // else if 여기서는 쓸 수 없음
-	  }
-	  if(score >= 70) {
-      gift = gift + "도마"; 
-	  }
-	  if(score >= 80) {
-      gift = gift + "식칼"; 
-    }
-	  if(score >= 90) {
-      gift = gift + "냄비"; 
-    }
-	  System.out.println(gift);
+		int score = Integer.parseInt(strScore);
+		if(score >= 60) {
+		  gift = gift + "행주";
+		}
+		if(score >= 70) {
+		  gift = gift +"도마";
+		}if(score >= 80) {
+		  gift += "식칼";
+		}if(score >= 90) {
+		  gift += "냄비";
+		}
+		System.out.println(gift);
+		
 	}
 
 
