@@ -11,6 +11,4 @@ public class Cup {
     this.coffee = coffee;
   }
   
-
-
 }
