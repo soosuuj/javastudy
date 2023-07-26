@@ -12,7 +12,7 @@ public class MainWrapper {
     p.eatEverything(new Gosu("고수")); // 고수 먹는다.
     
     p.eatPossible(new AppleMango("애플망고"));  //애플망고 먹는다.
-    p.eatPossible(new Gosu("고수"));    // 컴파일 오류 발생
+    //p.eatPossible(new Gosu("고수"));    // 컴파일 오류 발생
   }
 
 }
