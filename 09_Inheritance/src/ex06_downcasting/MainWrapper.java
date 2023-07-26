@@ -17,6 +17,7 @@ public class MainWrapper {
     System.out.println(p instanceof Student); // p가 Student 타입이면 true, 아니면 false
     System.out.println(p instanceof Worker);  // p가 Worker  타입이면 true, 아니면 false
     
+    System.out.println("-----------------------------");
   }
   
   public static void ex03() {
@@ -35,7 +36,9 @@ public class MainWrapper {
   }
   
   public static void main(String[] args) {
+    
     ex02();
-  }
+    ex03();
 
+ }
 }
