@@ -9,6 +9,5 @@ public class Student extends Person {
     super(name);
   }
 
-  
-  
+
 }
