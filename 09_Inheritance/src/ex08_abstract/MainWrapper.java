@@ -9,6 +9,7 @@ public class MainWrapper {
     p1.eat();
     p1.sleep();
     
+    System.out.println("------------------------");
     
     Person p2 = new Student();
     p2.eat();
