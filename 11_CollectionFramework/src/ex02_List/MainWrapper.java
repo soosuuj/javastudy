@@ -51,6 +51,7 @@ public class MainWrapper {
      //﻿`ArrayList<String>`은 `List<String>` 인터페이스를 구체적으로 구현한 구현 클래스
      season = new ArrayList<String>();
          
+    
     // 배열 요소 추가하기(`ArrayList<String>`인 `season`에 요소를 추가하는 작업)
     season.add("여름");
     //"여름"이라는 문자열을 `season` 리스트의 끝에 추가 리스트에는 현재 "여름" 하나만 들어감.
@@ -66,6 +67,7 @@ public class MainWrapper {
     System.out.println(season.get(1));
     System.out.println(season.get(2));
     System.out.println(season.get(3));
+    
     
   }
   
