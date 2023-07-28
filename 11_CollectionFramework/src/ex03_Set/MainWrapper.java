@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class MainWrapper {
-   /*
+    /*
      * Set
      * 1. 인덱스가 없다. 저장 순서가 없다. -> 인덱스가 사용되는 메서드는 없음
      * 2. 중복 저장이 되지 않는다.
@@ -70,6 +70,7 @@ public class MainWrapper {
     
     // 반복자 Iterator를 이용한 Set 순회(for문 대신 사용한다)
     Iterator<String> arm = flower.iterator(); 
+    
     System.out.println(arm.hasNext());  // 있는지 확인하고 꺼내기, 있으면 true, 없음 false
     System.out.println(arm.next());  // 아무거나 하나 꺼내기
     

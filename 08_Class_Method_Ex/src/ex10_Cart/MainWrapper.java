@@ -12,10 +12,17 @@ public class MainWrapper {
     // 고객이 카트를 가짐
     c.setCart(cart);
  
+    c.deleteProductFromCart(0);  //-> 예외 상황
     // 고객이 카트에 물건을 넣음
     c.addProductToCart(new Product("1", "양파링", 1000));
     c.addProductToCart(new Product("2", "새우깡", 2000));
     c.addProductToCart(new Product("3", "맛동산", 3000));
+    
+    // 고객이 카트 물건을 바꿈
+    c.chageProductFromCart(0, new Product("4", "웨하스", 5000));
+    
+    // 고객이 카트에서 물건을 뺌
+    c.deleteProductFromCart(1);
  
     // 구매하고 영수증 받음
     String receipt = c.buy();

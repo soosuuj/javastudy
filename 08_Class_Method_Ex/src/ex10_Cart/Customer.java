@@ -84,7 +84,11 @@ public class Customer {
      
       
     }
-      // 발생 포인트 누적
+    // 비용 지불
+    money -= totalPrice;
+    
+    
+    // 발생 포인트 누적
     point += totalPrice * 0.1;
     
     // 영수증 만들기
