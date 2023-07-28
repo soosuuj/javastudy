@@ -49,12 +49,13 @@ public class MainWrapper {
       System.out.println("writer " + board.get("writer"));
       System.out.println("view " + board.get("view"));
       
+      /*
       System.out.println("---------------------------------------");
     for(Entry<String, Object> entry  : board.entrySet() ) {
       System.out.println(entry.getKey() + " : " + entry.getValue());
       
     }
-      
+     */ 
       
     }
     

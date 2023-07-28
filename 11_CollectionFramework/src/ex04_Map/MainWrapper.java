@@ -31,7 +31,7 @@ public class MainWrapper {
     dict = new HashMap<String, String>();
     
     // Entry 저장(Key, Value) -> 동일한 key는 2개 이상 들어갈 수 없다. 
-    // 동일한 키 사용하게 된다면, 기존 데이터 엎어써짐
+    // 동일한 키 사용하게 된다면, 기존 데이터 덮어써짐
     
     // 봄을 전달하면 답은 spring 출력, 한글만 보이고 영어 안보인다고생각하기!
     dict.put("봄", "spring");
