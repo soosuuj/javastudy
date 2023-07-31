@@ -28,7 +28,7 @@ public class Ex01_String {
     // 문자열 리터럴 비교 -> 참조값의 비교 수행
     // name1과 name2의 참조값이 동일하다.
     boolean isEqual = name1 == name2;
-    System.out.println(isEqual);
+    System.out.println(isEqual);   //true
     
   }
   
@@ -59,7 +59,7 @@ public class Ex01_String {
     // 문자열 객체 비교 -> 참조값의 비교 수행
     // name1과 name2의 참조값이 다르다.
     boolean isEqual = name1 == name2;
-    System.out.println(isEqual);
+    System.out.println(isEqual);  //false
   }
   public static void ex03() {
     
@@ -283,7 +283,7 @@ public class Ex01_String {
     
   public static void main(String[] args) {
     //ex01();
-    //ex02();
+    ex02();
     //ex03();
     //ex04();
     //ex05();
@@ -295,7 +295,7 @@ public class Ex01_String {
     //ex11();
     //ex12();
     //ex13();
-    ex14();
+    //ex14();
     //ex15()
     
     

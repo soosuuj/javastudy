@@ -65,7 +65,7 @@ public class Ex05_Calendar {
   
   public static void main(String[] args) {
     //ex01();
-    //ex02();
+    ex02();
 
     
     
