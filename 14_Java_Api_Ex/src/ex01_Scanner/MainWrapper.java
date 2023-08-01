@@ -1,3 +1,4 @@
+package ex01_Scanner;
 import java.util.Scanner;
 
 public class MainWrapper {
@@ -45,12 +46,20 @@ public class MainWrapper {
  // 정답입니다.
  public static void ex02() {
    
-   
    Scanner sc = new Scanner(System.in);
    
+   while(true){
    System.out.println("대한민국의 수도는?");
-   String input = sc.next();
+   String  input  = sc.next();
   
+   if(input.equalsIgnoreCase("서울") || input.equalsIgnoreCase("seoul") || input.equalsIgnoreCase("SEOUL") ) {
+     System.out.println("정답입니다.");
+     break;
+   } else {
+     System.out.println("오답입니다.");
+   }
+   }
+    sc.close();
    
  }
  
@@ -62,6 +71,25 @@ public class MainWrapper {
  // 평점(1~5) 입력 >>> 3
  // ★★★
  public static void ex03() {
+   
+   System.out.println("범위를 입력하세요.");
+   Scanner sc = new Scanner(System.in);
+   int input = sc.nextInt();
+  
+   while(true) {
+   if( input >= 1 && input <=5) {
+     for(int i = 1; i <= input ; i++) {
+       System.out.print("★");  
+     }
+     break;  
+   }
+   else {
+     System.out.println("범위를 벗어났습니다. 다시 입력하세요.");
+    input = sc.nextInt();
+   }
+ }
+   sc.close();
+ 
    
  }
  
@@ -80,6 +108,29 @@ public class MainWrapper {
  // 비밀번호? >>> 1234
  // 성공
  public static void ex04() {
+   
+   System.out.println("비밀 번호를 입력하세요.");
+   Scanner sc = new Scanner(System.in);
+    int pw = sc.nextInt();
+   
+   
+    if(pw == 1234) {
+       System.out.println("성공");
+       sc.close();
+       return;
+     }
+       for(int i= 0; i < 4; i++) {
+         System.out.println("비밀번호가 틀렸습니다.");
+         pw = sc.nextInt();
+         
+         if(pw  == 1234) {
+           System.out.println("성공!");
+           sc.close();
+           return;
+       }
+   }
+       System.out.println("5회 이상 틀림");
+   sc.close();
   
  }
  
@@ -98,11 +149,11 @@ public class MainWrapper {
  }
  
  public static void main(String[] args) {
-   ex01();
-   ex02();
-   ex03();
-   ex04();
-   ex05();
+   //ex01();
+   //ex02();
+   //ex03();
+   //ex04();
+   //ex05();
  }
 
 }
