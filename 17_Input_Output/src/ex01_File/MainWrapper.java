@@ -72,7 +72,7 @@ public class MainWrapper {
       System.out.println("myfile.txt 파일 생성 완료");
     }
     
-    } catch (IOException e) {
+    } catch (IOException e    ) {
       e.printStackTrace();
     }
  
