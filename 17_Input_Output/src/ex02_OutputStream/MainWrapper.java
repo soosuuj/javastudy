@@ -37,6 +37,11 @@ public class MainWrapper {
     try {
       
      // 파일 출력 스트림 생성(반드시 예외 처리가 필요한 코드) -> 예외 처리 안되있음 실행 안되는 checked exception
+     
+      
+      // 1. 생성모드 : 언제나 새로 만든다.(덮어쓰기)           new FileOutputStream(file)
+      // 2. 추가모드 : 새로 만들거나, 기존 파일에 추가한다.    new FileOutputStream(file, true) - > 처음만 새로만들고 그 다음부터 추가
+      
     fout = new FileOutputStream(file); // 생성, 따로하는 이유 범위 조절 때문,  출력 스트림의 목적지가 파일로 결정됨 -> 예외 처리 요구됨!!!
     
     // 출력할 데이터(파일로 보낼 데이터)
@@ -51,6 +56,12 @@ public class MainWrapper {
     
     //fout.close(); 여따쓰면 fout.write(c); 여기서 예외 발생시 밑에 코드 작동 안하므로 여기다 쓰면 안됨
     
+    
+    System.out.println(file.getPath()+ " 파일크기 " + file.length() +"바이트"); 
+    // 파일이름을 파일 객체로 부터 가져옴 .getName(); getParent() -> 폴더가져옴, getPath() -> 경로 + 파일 가져옴
+    //file.length() 바이트 단위로 크기 출력
+    
+    
     } catch (IOException e) {
       e.printStackTrace();  // 예외 어디서 발생하는지 
     } finally {
@@ -64,9 +75,7 @@ public class MainWrapper {
     }
     }
     
-    System.out.println(file.getPath()+ " 파일크기 " + file.length() +"바이트"); 
-    // 파일이름을 파일 객체로 부터 가져옴 .getName(); getParent() -> 폴더가져옴, getPath() -> 경로 + 파일 가져옴
-    //file.length() 바이트 단위로 크기 출력
+    
     
   }
   

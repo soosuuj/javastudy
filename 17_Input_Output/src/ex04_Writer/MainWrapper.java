@@ -35,6 +35,10 @@ public class MainWrapper {
     try {
       
       // 파일 출력 스트림 생성(반드시 예외 처리가 필요한 코드)
+      
+      // 1. 생성모드 : 언제나 새로 만든다.(덮어쓰기)           new FileWriter(file)
+      // 2. 추가모드 : 새로 만들거나, 기존 파일에 추가한다.    new FileWriter(file, true) - > 처음만 새로만들고 그 다음부터 추가
+   
       fw = new FileWriter(file);
       
       // 출력할 데이터(파일로 보낼 데이터)
@@ -149,7 +153,7 @@ public class MainWrapper {
       // 출력할 데이터(파일로 보낼 데이터)
       String str1 = "Hello";
       String str2 = "world";
-          
+            
       // 출력)파일로 데이터 보내기
       out.println(str1); 
       out.println(str2);
