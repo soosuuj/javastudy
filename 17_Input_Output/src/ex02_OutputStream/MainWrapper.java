@@ -3,10 +3,8 @@ package ex02_OutputStream;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.nio.charset.StandardCharsets;
@@ -203,31 +201,32 @@ public class MainWrapper {
       dout = new DataOutputStream(new FileOutputStream(file)); // 생성, file을 바로 넣지 않음
       // FileOutputStream을 만들어 파일쪽으로 통로를 하나 만들고 거기다 BufferedOutputStream를 끼움(추가)
     
-    // 출력할 데이터(파일로 보낼 데이터)
-    String name = "tom";
-    int age = 50;
-    double height = 180.5;
-    String school = "가산대학교";
+      // 출력할 데이터(파일로 보낼 데이터)
+      String name = "tom";
+      int age = 50;
+      double height = 180.5;
+      String school = "가산대학교";
     
-    // 출력(파일로 데이터 보내기)
-    dout.writeBytes(name);
-    dout.write(age);
-    dout.writeDouble(height);
-    dout.writeUTF(school);
-   
-    
-    } catch (IOException e) {
-      e.printStackTrace();  // 예외 어디서 발생하는지 
-    } finally {
-    try {
-      if(dout != null);
-      dout.close();    
+      // 출력(파일로 데이터 보내기)
+      dout.writeChars(name);  // dout.writeChar('t'), dout.writeChar('o'), dout.writeChar('m')
+      dout.writeInt(age);
+      dout.writeDouble(height);
+      dout.writeUTF(school);
+      
     } catch (IOException e) {
       e.printStackTrace();
+    } finally {
+      try {
+        if(dout != null) {
+          dout.close();  // 출력스트림은 반드시 닫아줘야 함 (반드시 예외 처리가 필요한 코드)
+        }
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
     }
-    }
- 
-    System.out.println(file.getPath()+ " 파일크기 " + file.length() +"바이트");
+    
+    System.out.println(file.getPath() + " 파일 크기 : " + file.length() + "바이트");
+    
   }
 
   public static void ex05() {
@@ -290,8 +289,8 @@ public class MainWrapper {
     //ex01();
     //ex02();
     //ex03();
-    //ex04();
-    ex05();
+    ex04();
+    //ex05();
   }
 
 }
