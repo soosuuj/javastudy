@@ -133,10 +133,27 @@ public class MainWrapper {
     
   }
   
+  public static void ex05() {
+    
+    
+    /*
+     * java.io.ObjectOutoutStream  //Stream 통로의 개념
+     * 1. 객체를 그대로 출력하는 출력스트림이다.
+     *     김밥을 하나씩 보내야함 객체는 통김밥, 직렬화 자른 김밥  
+     *     객체를 통채로 보낼 수 없어서 객체화 시켜 하나씩 보내야함
+     *     통김밥은 보낼 수 없니 잘라서 보내는 것 -> 직렬화
+     * 2.직렬화(Serializable)된 객체를 보낼 수 있다. 
+     *   
+     * 
+     */
+  }
+  
+  
   public static void main(String[] args) {
     //ex01();
     //ex02();
     ex03();
+    ex05();
   }
 
 }
