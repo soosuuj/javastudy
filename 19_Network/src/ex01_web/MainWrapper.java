@@ -5,9 +5,12 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 public class MainWrapper {
 
@@ -207,12 +210,45 @@ public class MainWrapper {
     
   }
   
+  public static void ex04() {
+    
+    /*
+     * Encoding : 원본 데이터를 암호화 하는 것
+     * Decoding : 암호화 된 데이터를 원본 데이터로 복호화 하는 것
+     */
+    
+    try {
+      
+      // 원본 데이터
+      String originData = "홍길동 tom 12345 !@#$%^&*()_+";
+      System.out.println("원본 : " + originData);
+      
+      // Encoding(암호화)
+      String encodeData = URLEncoder.encode(originData, "UTF-8"); // UnsupportedEncodingException 발생 (지원하지 않는 인코딩 익셉셥)
+      System.out.println("암호 : " + encodeData);   //원본 : 홍길동 tom 12345 !@#$%^&*()_+ -> 공백이 +로 바뀜
+
+      //Decoding(복호화)
+      String decodeDate = URLDecoder.decode(encodeData, "UTF-8");  // UnsupportedEncodingException 발생 (지원하지 않는 인코딩 익셉셥)
+      System.out.println("복호 : " + decodeDate);   //복호 : 홍길동 tom 12345 !@#$%^&*()_+
+
+    } catch (UnsupportedEncodingException e) {
+      System.out.println("인코딩 오류");   //암호 : %ED%99%8D%EA%B8%B8%EB%8F%99+tom+12345+%21%40%23%24%25%5E%26*%28%29_%2B
+
+    }
+    
+  }
+  
+  
+  
+  
+  
   
   public static void main(String[] args) {
 
     //ex01();
     //ex02();
-    ex03();
+    //ex03();
+    ex04();
     
   }
 
