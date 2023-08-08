@@ -58,7 +58,7 @@ public class MainWrapper {
       }
 
       File dir = new File("C:/storage");
-      if (!dir.exists()) {
+      if(dir.exists() == false) {
           dir.mkdirs();
       }
 
@@ -84,7 +84,7 @@ public class MainWrapper {
               reader.close();
           if (con != null)
               con.disconnect();
-      } catch (Exception e) {
+      } catch (IOException e) {
           e.printStackTrace();
       }
   }
