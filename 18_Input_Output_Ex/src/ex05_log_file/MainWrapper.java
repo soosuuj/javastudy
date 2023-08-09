@@ -1,15 +1,17 @@
 package ex05_log_file;
 
-import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class MainWrapper {
-
+  
+ // 이거 시험
+ // 프로그램 무한 루프 -> 끝나지 않기 때문에 직접 실행 중지 강제로 해줘야함
   public static void main(String[] args) {
     @SuppressWarnings("resource")  // sc.close()를 생략해도 경고 메시지를 보이지 말라.
     Scanner sc = new Scanner(System.in);
@@ -45,26 +47,43 @@ public class MainWrapper {
         
         // 문제. 예외가 발생할때마다 예외가 발생한 시간과 예외 메시지(message)를 C:/storage/log.txt 파일에 기록하시오.
         // C:/storage/log.txt 파일 내용 예시)
-        // 2023-08-04 15:10:30    / by zero
-        // 2023-08-04 15:11:23    invalid operator ++
-        // 2023-08-04 15:12:52    null
+        // 2023-08-04 오후 3:10:30    / by zero
+        // 2023-08-04 오후 3:11:23    invalid operator ++
+        // 2023-08-04 오후 3:12:52    null
         
-        // 예외가 발생한 시간과 예외 메시지를 로그 파일에 기록
+        
+        // 예외 발생 시간
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd a h:mm:ss");
+        String time = dtf.format(now);
+        
+        // 예외 메시지
+        String message = e.getMessage();
+        
+        // 예외 클래스 이름
+        String clazz = e.getClass().getName();
+        
+        // File 객체   log 파일 만들기
         File dir = new File("C:/storage");
-        if (!dir.exists()) {
-            dir.mkdirs();
+        if(dir.exists() == false) {
+          dir.mkdirs();
         }
         File file = new File(dir, "log.txt");
-      
-      try (BufferedWriter = new BufferedWriter(new FileWriter(file, true))){
-        String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         
-        
-        
-      } catch (Exception e) {
-        // TODO: handle exception
-      }
-        
+        //try -catch - resources
+        // 추가모드 : 기존 파일에 내용을 추가하는 모드 new FileWriter(file, true)
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))){
+          
+          // 로그 파일에 "시간 예외메지 예외 클래스" 추가하기
+          bw.write(time + "  " + message + "  " + clazz);
+          bw.newLine();
+          
+          // 결과 메서지 
+          System.out.println(file.getPath() + "파일 예외 처리 완료");
+          
+        }catch (IOException e2) {
+          e2.printStackTrace();
+        }
         
       }
       
