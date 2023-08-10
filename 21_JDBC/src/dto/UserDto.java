@@ -3,6 +3,7 @@ package dto;
 import java.sql.Date;
 
 public class UserDto {
+  // ﻿"DTO" 데이터 전송 객체(Data Transfer Object)
   
   private int user_no;
   private String user_id;
