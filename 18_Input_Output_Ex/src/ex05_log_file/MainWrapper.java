@@ -54,7 +54,7 @@ public class MainWrapper {
         
         // 예외 발생 시간
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd a h:mm:ss");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
         String time = dtf.format(now);
         
         // 예외 메시지
