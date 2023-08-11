@@ -8,7 +8,7 @@ Lotto를 얼마나 구입하시겠습니까?(최대 10만원) >>> -10
 -10원 Lotto 구매는 불가능합니다.
 
 
-*** 1000000 초과 입력 시 오류 ***
+*** 100000 초과 입력 시 오류 ***
 Lotto를 얼마나 구입하시겠습니까?(최대 10만원) >>> 999999
 999999원 Lotto 구매는 불가능합니다.
 
@@ -36,7 +36,7 @@ Lotto를 얼마나 구입하시겠습니까?(최대 10만원) >>> 11000
   public static void main(String[] args) {
     
     Lotto lotto = new Lotto();
-    lotto.generateLotto(lotto.buyLotto());
+    lotto.generateLotto(lotto.buyLotto()); // 5000값 전달
 
   }
 
