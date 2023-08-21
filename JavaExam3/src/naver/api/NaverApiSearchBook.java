@@ -56,7 +56,8 @@ public class NaverApiSearchBook {
       
       LocalDateTime now = LocalDateTime.now();
       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
-      String fileName = "log_" + now.format(formatter) + "." + extName;
+      String fileName = "thumbnail_" + now.format(formatter) + "." + extName; // 파일명 생성
+      
       
       File file = new File(dir, fileName);
       
@@ -139,7 +140,7 @@ public class NaverApiSearchBook {
 
       int resposeCode = con.getResponseCode();
       if(resposeCode != HttpURLConnection.HTTP_OK) {
-        throw new  RuntimeException(resposeCode +"발생");
+
       }
       reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
       
@@ -154,11 +155,9 @@ public class NaverApiSearchBook {
       for (int i = 0, length = items.length(); i < length; i++) {
           JSONObject item = items.getJSONObject(i);
           
-          
-          
-          
-      String imageUrl = item.getString("image");
-      generateImage(imageUrl); 
+          String imageUrl = item.getString("image");
+          generateImage(imageUrl); 
+
 
         
       }
@@ -172,14 +171,12 @@ public class NaverApiSearchBook {
       DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd a hh:mm:ss");
       String time = dtf.format(now);
       
-      // 예외 메시지
-      String message = e.getMessage();
       
       // 예외 클래스 이름
       String clazz = e.getClass().getName();
       
       // File 객체   log 파일 만들기
-      File dir = new File("C:/download");
+      File dir = new File("C:/download/log");
       if(dir.exists() == false) {
         dir.mkdirs();
       }
@@ -190,7 +187,7 @@ public class NaverApiSearchBook {
       try(BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))){
         
         // 로그 파일에 "시간 예외메지 예외 클래스" 추가하기
-        bw.write(time + "  " + message + "  " + clazz);
+        bw.write(time + "  " + clazz);
         bw.newLine();
         
         // 결과 메서지 
